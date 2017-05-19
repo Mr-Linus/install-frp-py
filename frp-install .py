@@ -29,7 +29,7 @@ class app:
     def appdownload(self):
         osRadioDia = os.popen('python3 RadioDia.py')
         select = int(osRadioDia.read())
-        os.system("sudo ./shell/download.sh %s &>/dev/null " % select )
+        os.system("sudo bash ./shell/download.sh %s &>/dev/null " % select )
 root = Tk()
 app = app(root)
 root.mainloop()
