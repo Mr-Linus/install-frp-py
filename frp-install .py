@@ -1,0 +1,35 @@
+from tkinter  import *
+import  os
+import time
+class app:
+    def __init__(self,root):
+            frame1 = Frame(root)
+            #frame2 = Frame(root)
+            #frame3 = Frame(root)
+            #frame4 = Frame(root)
+            #frame5 = Frame(root)
+            #frame6 = Frame(root)
+            root.title("FRP客户端安装器V0.1")
+            root.geometry('100x200')
+            self.download = Button(frame1,text="下载FRP",fg = "white" , command = self.appdownload)
+            self.download.pack()
+            #self.config = Button(frame2,text="配置FRP",fg = "white" , command = self.appconfig)
+            #self.config.pack(side=LEFT)
+            #self.status = Button(frame3,text="查看FRP状态",fg = "white" , command = self.appstatus)
+            #self.status.pack(side=LEFT)
+            #self.start = Button(frame4,text="启动FRP",fg = "white" , command = self.appstart)
+            #self.start.pack(side=LEFT)
+            #self.stop = Button(frame5,text="停止FRP",fg = "white" , command = self.appstop)
+            #self.stop.pack(side=LEFT)
+            #self.restart = Button(frame6,text="重启FRP",fg = "white" , command = self.apprestart)
+            #self.restart.pack()
+            self.label = Label(root,text="制作人:mr.funky \n QQ:708863861")
+            self.label.pack()
+            frame1.pack()
+    def appdownload(self):
+        osRadioDia = os.popen('python3 RadioDia.py')
+        select = int(osRadioDia.read())
+        os.system("sudo ./bash/download.sh %s &>/dev/null " % select )
+root = Tk()
+app = app(root)
+root.mainloop()
