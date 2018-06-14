@@ -18,6 +18,6 @@ python3 frp-install.py
 
 如果提示没有python命令,请使用python3安装脚本:
 
-git clone https://github.com/Mr-Linus/Install-Python3-Bash ; cd Install-Python3-Bash
+git clone https://github.com/Mr-Linus/install-py3 ; cd install-py3
 
-sudo ./Install-Python3.sh
+sudo ./install.sh
